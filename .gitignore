@@ -1,3 +1,7 @@
 # executables
 scanner
 scanner.exe
+parser
+parser.exe
+interpreter
+interpreter.exe
