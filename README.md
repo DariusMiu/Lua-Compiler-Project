@@ -9,3 +9,8 @@
 `1.` Done  
 `2.` In Progress  
 `3.` Pending  
+
+## Notes:  
+##### Scanner:  
+When run, the scanner will automatically scan test.lua. To scan a different file, simply call it from command line like so:  
+`./scanner mow.lua`
