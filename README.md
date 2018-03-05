@@ -1,4 +1,4 @@
-### Just a simple compiler for my Concepts of Computer Languages course
+## Just a simple compiler for my Concepts of Computer Languages course
 
 ##### Project Components:
 `1.` Scanner  
