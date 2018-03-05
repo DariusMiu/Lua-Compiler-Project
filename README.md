@@ -1,4 +1,4 @@
-## Just a simple compiler for my Concepts of Computer Languages course  
+## Just a simple compiler for my Computer Programming Languages course  
 Scans, parses, then interprets and runs a lua file  
 This project only works with an extremely simplified version of lua  
 
