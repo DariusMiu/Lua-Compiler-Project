@@ -13,6 +13,8 @@ This project only works with an extremely simplified version of lua
 `3.` Pending  
 
 ## Notes:  
-##### Scanner:  
-When run, the scanner will automatically scan test.lua. To scan a different file, simply call it from command line like so:  
-`./scanner mow.lua`  
+To compile, be sure to include all files in the compile line:  
+g++ Token.cpp scanner.cpp parser.cpp main.cpp -o scanner  
+
+When run, the program will automatically run against test.lua. To run on a different file, simply call it from command line like so:  
+`./main mow.lua`  
