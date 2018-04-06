@@ -6,7 +6,7 @@
 class parser
 {
 	public:
-		static void parse(std::string fileName);
+		static void parse(char* filename);
 	//private: 
 	//	static bool isop(char test);
 };
