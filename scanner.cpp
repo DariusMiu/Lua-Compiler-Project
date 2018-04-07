@@ -1,6 +1,5 @@
 #include <iostream>
 #include <sstream>
-#include <locale>
 
 
 #include "scanner.h"
@@ -41,7 +40,15 @@ Token scanner::getToken(ifstream *inFile)
 		int singleCharOps = 9;	// this is COUNT of the single character operators in operators[]
 		char char2 = (*inFile).peek();
 
-		if (!isop(char2))
+		if (char1 == operators[7][0])
+		{ // char1 == '('
+			returnToken = 7;
+		}
+		else if (char1 == operators[8][0])
+		{ // char1 == ')'
+			returnToken = 8;
+		}
+		else if (!isop(char2))
 		{
 			for (int i = 0; i < singleCharOps; i++)
 			{
@@ -145,8 +152,8 @@ Token scanner::getToken(ifstream *inFile)
 			}
 		}
 
-		if (returnToken == 300 && wholeword.length() > 1)
-		{ returnToken = -3; }	// REMOVE THIS IF TO RESTORE FULL VARIABLE NAME FUNCTIONALITY
+		//if (returnToken == 300 && wholeword.length() > 1)
+		//{ returnToken = -3; }	// REMOVE THIS IF TO RESTORE FULL VARIABLE NAME FUNCTIONALITY
 	}
 	if (returnToken == 200 || returnToken == 300)
 	{
@@ -168,4 +175,12 @@ Token scanner::getToken(ifstream *inFile)
 	}
 	
 	return Token (returnToken, ss.str());
+};
+
+Token scanner::peekToken(ifstream *inFile)
+{
+	int inFileLocation = (*inFile).tellg();
+	Token tempToken = scanner::getToken(inFile);
+	(*inFile).seekg(inFileLocation);
+	return tempToken;
 };

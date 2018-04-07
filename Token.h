@@ -8,8 +8,10 @@ class Token
 {
 	public:
 		Token (int _token, std::string _lexeme);
-		int tokenID;
-		std::string lexemeWord;
+		Token (int _token);
+		Token ();
+		int ID;
+		std::string lexeme;
 		void Print();
 };
 

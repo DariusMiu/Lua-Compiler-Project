@@ -3,9 +3,11 @@
 
 using namespace std;
 
-int tokenID;
-string lexemeWord;
+int ID;
+string lexeme;
 
-Token::Token (int _token, string _lexeme) : tokenID(_token), lexemeWord(_lexeme) {};
-void Print()
-{ std::cout << "token:" << tokenID << " lexeme:" << lexemeWord << std::endl; };
+Token::Token () { ID = 0; lexeme = ""; };
+Token::Token (int _token) : ID(_token) { lexeme = ""; };
+Token::Token (int _token, string _lexeme) : ID(_token), lexeme(_lexeme) {};
+void Token::Print()
+{ std::cout << "token:" << ID << " lexeme:" << lexeme << std::endl; };
