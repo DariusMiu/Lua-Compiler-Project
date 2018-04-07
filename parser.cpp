@@ -211,10 +211,8 @@ void parser::print_statement(std::queue<ParseNode> *parsetree, ifstream *inFile)
 		parser::exitnode(parsetree, "print_statement");
 		return;
 	}
-
 	// find arithmetic_expression
 	parser::arithmetic_expression(parsetree, inFile);
-
 	// find ')'
 	tempToken = scanner::getToken(inFile);
 	tempToken.Print();
@@ -266,9 +264,7 @@ void parser::relative_op(std::queue<ParseNode> *parsetree, ifstream *inFile)
 	else if (tempToken.ID == -1 || tempToken.ID == -4) // error
 	{ return; }
 	else
-	{
-		cout << "error: invalid <relative_op>" << endl;
-	}
+	{ cout << "error: invalid <relative_op>" << endl; }
 
 	parser::exitnode(parsetree, "relative_op");
 }
@@ -306,7 +302,6 @@ void parser::arithmetic_expression(std::queue<ParseNode> *parsetree, ifstream *i
 		tempToken.Print();
 		cout << "error: arithmetic_expression invalid" << endl;
 	}
-
 
 	parser::exitnode(parsetree, "arithmetic_expression");
 }

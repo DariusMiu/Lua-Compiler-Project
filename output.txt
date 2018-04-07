@@ -1,0 +1,377 @@
+Enter <program>
+[ID:300 lex:func]
+[ID:5 lex:(]
+[ID:6 lex:)]
+Enter <block>
+Enter <statement>
+peek:[ID:200 lex:1254]
+error: statement invalid
+</exit statement>
+peek:[ID:200 lex:871515]
+
+Enter <block>
+Enter <statement>
+peek:[ID:200 lex:871515]
+error: statement invalid
+</exit statement>
+peek:[ID:300 lex:a]
+
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:a]
+Enter <assignment_statement>
+[ID:300 lex:a]
+[ID:0 lex:=]
+Enter <arithmetic_expression>
+peek [ID:200 lex:5]
+[ID:200 lex:5]
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:200 lex:4]
+
+Enter <block>
+Enter <statement>
+peek:[ID:200 lex:4]
+error: statement invalid
+</exit statement>
+peek:[ID:109 lex:if]
+
+Enter <block>
+Enter <statement>
+peek:[ID:109 lex:if]
+Enter <if_statement>
+[ID:109 lex:if]
+Enter <boolean_expression>
+peek:[ID:200 lex:4]
+Enter <relative_op>
+[ID:200 lex:4]
+error: invalid <relative_op>
+</exit relative_op>
+Enter <arithmetic_expression>
+peek [ID:7 lex:<]
+[ID:7 lex:<]
+error: arithmetic_expression invalid
+</exit arithmetic_expression>
+Enter <arithmetic_expression>
+peek [ID:200 lex:5]
+[ID:200 lex:5]
+</exit arithmetic_expression>
+</exit boolean_expression>
+[ID:117 lex:then]
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:poke]
+Enter <assignment_statement>
+[ID:300 lex:poke]
+[ID:0 lex:=]
+Enter <arithmetic_expression>
+peek [ID:200 lex:1]
+[ID:200 lex:1]
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:103 lex:else]
+</exit block>
+[ID:103 lex:else]
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:poke]
+Enter <assignment_statement>
+[ID:300 lex:poke]
+[ID:0 lex:=]
+Enter <arithmetic_expression>
+peek [ID:200 lex:0]
+[ID:200 lex:0]
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:105 lex:end]
+</exit block>
+[ID:105 lex:end]
+</exit if_statement>
+</exit statement>
+peek:[ID:300 lex:mow]
+
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:mow]
+Enter <assignment_statement>
+[ID:300 lex:mow]
+[ID:0 lex:=]
+Enter <arithmetic_expression>
+peek [ID:3 lex:*]
+Enter <arithmetic_op>
+[ID:3 lex:*]
+</exit arithmetic_op>
+Enter <arithmetic_expression>
+peek [ID:300 lex:mow]
+[ID:300 lex:mow]
+</exit arithmetic_expression>
+Enter <arithmetic_expression>
+peek [ID:200 lex:2]
+[ID:200 lex:2]
+</exit arithmetic_expression>
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:300 lex:what]
+
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:what]
+Enter <assignment_statement>
+[ID:300 lex:what]
+[ID:-5 lex:~]
+error: '=' expected
+Enter <arithmetic_expression>
+peek [ID:200 lex:14]
+[ID:200 lex:14]
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:120 lex:while]
+
+Enter <block>
+Enter <statement>
+peek:[ID:120 lex:while]
+Enter <while_statement>
+[ID:120 lex:while]
+Enter <boolean_expression>
+peek:[ID:9 lex:~=]
+Enter <relative_op>
+[ID:9 lex:~=]
+</exit relative_op>
+Enter <arithmetic_expression>
+peek [ID:200 lex:4]
+[ID:200 lex:4]
+</exit arithmetic_expression>
+Enter <arithmetic_expression>
+peek [ID:200 lex:5]
+[ID:200 lex:5]
+</exit arithmetic_expression>
+</exit boolean_expression>
+[ID:102 lex:do]
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:butts]
+Enter <assignment_statement>
+[ID:300 lex:butts]
+[ID:0 lex:=]
+Enter <arithmetic_expression>
+peek [ID:200 lex:1]
+[ID:200 lex:1]
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:105 lex:end]
+</exit block>
+[ID:105 lex:end]
+</exit while_statement>
+</exit statement>
+peek:[ID:115 lex:repeat]
+
+Enter <block>
+Enter <statement>
+peek:[ID:115 lex:repeat]
+Enter <repeat_statement>
+[ID:115 lex:repeat]
+Enter <block>
+Enter <statement>
+peek:[ID:300 lex:mow]
+Enter <assignment_statement>
+[ID:300 lex:mow]
+[ID:0 lex:=]
+Enter <arithmetic_expression>
+peek [ID:1 lex:+]
+Enter <arithmetic_op>
+[ID:1 lex:+]
+</exit arithmetic_op>
+Enter <arithmetic_expression>
+peek [ID:200 lex:1]
+[ID:200 lex:1]
+</exit arithmetic_expression>
+Enter <arithmetic_expression>
+peek [ID:200 lex:1]
+[ID:200 lex:1]
+</exit arithmetic_expression>
+</exit arithmetic_expression>
+</exit assignment_statement>
+</exit statement>
+peek:[ID:119 lex:until]
+</exit block>
+[ID:119 lex:until]
+Enter <boolean_expression>
+peek:[ID:200 lex:1]
+Enter <relative_op>
+[ID:200 lex:1]
+error: invalid <relative_op>
+</exit relative_op>
+Enter <arithmetic_expression>
+peek [ID:8 lex:>]
+[ID:8 lex:>]
+error: arithmetic_expression invalid
+</exit arithmetic_expression>
+Enter <arithmetic_expression>
+peek [ID:200 lex:2]
+[ID:200 lex:2]
+</exit arithmetic_expression>
+</exit boolean_expression>
+</exit repeat_statement>
+</exit statement>
+peek:[ID:121 lex:print]
+
+Enter <block>
+Enter <statement>
+peek:[ID:121 lex:print]
+Enter <print_statement>
+[ID:121 lex:print]
+[ID:300 lex:butts]
+error: () expected after <print_statement>
+</exit print_statement>
+</exit statement>
+peek:[ID:105 lex:end]
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+</exit block>
+[ID:105 lex:end]
+</exit program>
+
+parsetree dump:
+<program> 
+<block> 
+<statement> 
+</exit statement> 
+<block> 
+<statement> 
+</exit statement> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+<block> 
+<statement> 
+</exit statement> 
+<block> 
+<statement> 
+<if_statement> 
+<boolean_expression> 
+<relative_op> 
+</exit relative_op> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit boolean_expression> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+</exit block> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+</exit block> 
+</exit if_statement> 
+</exit statement> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+<arithmetic_op> 
+</exit arithmetic_op> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+<block> 
+<statement> 
+<while_statement> 
+<boolean_expression> 
+<relative_op> 
+</exit relative_op> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit boolean_expression> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+</exit block> 
+</exit while_statement> 
+</exit statement> 
+<block> 
+<statement> 
+<repeat_statement> 
+<block> 
+<statement> 
+<assignment_statement> 
+<arithmetic_expression> 
+<arithmetic_op> 
+</exit arithmetic_op> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit assignment_statement> 
+</exit statement> 
+</exit block> 
+<boolean_expression> 
+<relative_op> 
+</exit relative_op> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+<arithmetic_expression> 
+</exit arithmetic_expression> 
+</exit boolean_expression> 
+</exit repeat_statement> 
+</exit statement> 
+<block> 
+<statement> 
+<print_statement> 
+</exit print_statement> 
+</exit statement> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit block> 
+</exit program> 
