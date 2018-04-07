@@ -9,7 +9,7 @@ using namespace std;
 
 bool scanner::isop(char test)
 {
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		if (operators[i][0] == test)
 		{ return true; }
@@ -20,7 +20,7 @@ bool scanner::isop(char test)
 Token scanner::getToken(ifstream *inFile)
 {
 	stringstream ss;
-	int returnToken = -4;
+	int returnToken = -4; // unknown character found
 	char char1;
 	string lex;
 	while (isspace((*inFile).peek()))
@@ -40,13 +40,13 @@ Token scanner::getToken(ifstream *inFile)
 		int singleCharOps = 9;	// this is COUNT of the single character operators in operators[]
 		char char2 = (*inFile).peek();
 
-		if (char1 == operators[7][0])
+		if (char1 == operators[5][0])
 		{ // char1 == '('
-			returnToken = 7;
+			returnToken = 5;
 		}
-		else if (char1 == operators[8][0])
+		else if (char1 == operators[6][0])
 		{ // char1 == ')'
-			returnToken = 8;
+			returnToken = 6;
 		}
 		else if (!isop(char2))
 		{

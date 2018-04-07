@@ -7,7 +7,7 @@ class Token;
 //#include <string>
 
 static std::string LexemeStrings[] = {"operator", "keyword", "digit", "id"};
-static char operators[][2] = {{'='}, {'<'}, {'>'}, {'+'}, {'-'}, {'*'}, {'/'}, {'('}, {')'}, {'<','='}, {'=','='}, {'~','='}, {'>','='}};
+static char operators[][2] = {{'='}, {'+'}, {'-'}, {'*'}, {'/'}, {'('}, {')'}, {'<'}, {'>'}, {'~','='}, {'<','='}, {'=','='}, {'>','='}};
 static std::string keywords[] = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil",
 	"not", "or", "repeat", "return", "then", "true", "until", "while", "print"};
 static char digits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
