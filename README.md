@@ -19,7 +19,7 @@ g++ Token.cpp scanner.cpp ParseNode.cpp parser.cpp main.cpp -o runme
 When run, the program will automatically run against test.lua. To run on a different file, simply call it from command line like so:  
 `./runme mylua.lua`  
 
-# REPORT:  
+# Report:  
 ## Original Assignment  
 Develop a complete parser that executes in conjunction with the scanner.  
 
