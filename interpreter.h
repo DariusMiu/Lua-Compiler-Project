@@ -1,18 +1,25 @@
 #ifndef interpreter_h
 #define interpreter_h
 
-class Integer;
-
 #include <string>
-#include <stack>
-//#include "Integer.h"
+#include <vector>
+#include "Integer.h"
 
 
 class interpreter
 {
 	public:
-		static void interpret(char* filename);
-
+		void interpret(char* filename);
+		std::vector<Integer> variables;
+		if_statement();
+		while_statement();
+		assignment_statement();
+		repeat_statement();
+		print_statement();
+		boolean_expression();
+		relative_op();
+		arithmetic_expression();
+		arithmetic_op();
 };
 
 #endif

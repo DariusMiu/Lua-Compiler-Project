@@ -1,8 +1,5 @@
 #include <iostream>
 #include "interpreter.h"
-#include "parser.h"
-#include "scanner.h"
-#include "Token.h"
 
 using namespace std;
 
@@ -12,7 +9,8 @@ int main(int argc, char** argv)
 	if (argc > 1)
 	{ filename = argv[1]; }
 	
-	interpreter::interpret(filename);
+	interpreter interp;
+	interp.interpret(filename);
 
 	return 0;
 }

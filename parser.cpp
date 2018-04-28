@@ -1,7 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <sstream>
-#include <stack>
 
 #include "parser.h"
 #include "scanner.h"
@@ -24,7 +21,7 @@ void parser::parse(char* filename)
 	queue<ParseNode> parsetree;
 	parser::program(&parsetree, &inFile);
 
-	if (!parsetree.empty())
+	/*if (!parsetree.empty())
 	{
 		cout << "\nparsetree dump:" << endl;
 		while (!parsetree.empty())
@@ -36,12 +33,19 @@ void parser::parse(char* filename)
 			cout << parsetree.front().name << "> " << parsetree.front().token.lexeme <<  endl;
 			parsetree.pop();
 		}
-	}
+	} /**/
 
 
 	inFile.close();
 }
 
+void parser::parse(char* filename, interpreter* itpr)
+{
+	interp = itpr;
+	if (interp != NULL) { cout << "nope, not null" << endl; }
+	else { cout << "yep, null" << endl; }
+	parser::parse(filename);
+}
 
 void parser::program(queue<ParseNode> *parsetree, ifstream *inFile)
 {

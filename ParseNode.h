@@ -1,7 +1,6 @@
 #ifndef ParseNode_h
 #define ParseNode_h
 
-#include <string>
 #include "Token.h"
 
 class ParseNode

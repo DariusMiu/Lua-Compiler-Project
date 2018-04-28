@@ -5,12 +5,15 @@
 #include <string>
 #include <queue>
 #include "ParseNode.h"
+#include "interpreter.h"
 
+static interpreter* interp;
 
 class parser
 {
 	public:
 		static void parse(char* filename);
+		static void parse(char* filename, interpreter* itpr);
 	protected: 
 		static void program(std::queue<ParseNode> *parsetree, std::ifstream *inFile);
 		static void block(std::queue<ParseNode> *parsetree, std::ifstream *inFile);
