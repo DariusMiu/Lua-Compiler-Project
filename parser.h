@@ -1,6 +1,7 @@
 #ifndef parser_h
 #define parser_h
 
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <queue>
@@ -14,8 +15,8 @@ static bool log;
 class parser
 {
 	public:
-		static void parse(char* filename, bool Log);
-		static void parse(char* filename, interpreter* itpr, bool Log);
+		static void parse(std::ifstream* inFile, bool Log);
+		static void parse(std::ifstream* inFile, interpreter* itpr, bool Log);
 	protected: 
 		static void program(std::queue<ParseNode> *parsetree, std::ifstream *inFile);
 		static void block(std::queue<ParseNode> *parsetree, std::ifstream *inFile, bool run);

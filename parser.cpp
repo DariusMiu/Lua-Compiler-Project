@@ -1,25 +1,15 @@
-#include <iostream>
-
 #include "parser.h"
 #include "scanner.h"
 
 using namespace std;
 
 
-void parser::parse(char* filename, bool Log)
+void parser::parse(ifstream* inFile, bool Log)
 {
 	log = Log;
-	ifstream inFile;
-	inFile.open(filename);
-	if (!inFile)
-	{
-		cout << "error: file not found" << endl;
-		cout << "to run on a file, run like so:\n./{executable} file.lua" << endl;
-		return;
-	}
 
 	queue<ParseNode> parsetree;
-	parser::program(&parsetree, &inFile);
+	parser::program(&parsetree, inFile);
 
 	if (interp == NULL && !parsetree.empty())
 	{
@@ -36,13 +26,12 @@ void parser::parse(char* filename, bool Log)
 	} /**/
 
 
-	inFile.close();
 }
 
-void parser::parse(char* filename, interpreter* itpr, bool Log)
+void parser::parse(ifstream* inFile, interpreter* itpr, bool Log)
 {
 	interp = itpr;
-	parser::parse(filename, Log);
+	parser::parse(inFile, Log);
 }
 
 void parser::program(queue<ParseNode> *parsetree, ifstream *inFile)

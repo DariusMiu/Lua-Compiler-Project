@@ -1,6 +1,7 @@
 #ifndef interpreter_h
 #define interpreter_h
 
+#include <iostream>
 #include <string>
 #include <vector>
 #include "Integer.h"
@@ -9,7 +10,7 @@
 class interpreter
 {
 	public:
-		void interpret(char* filename, bool log);
+		void interpret(std::ifstream* inFile, bool log);
 		void assignment(Token _variable, Token _value);
 		void removeInteger(std::string _name);
 		Token resolveBool(Token _tokens[3]);

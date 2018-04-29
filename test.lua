@@ -25,5 +25,5 @@ func()
 	mow = + mow 1
 	print (mow)
 	until == mow 10
-	end
+
 end
