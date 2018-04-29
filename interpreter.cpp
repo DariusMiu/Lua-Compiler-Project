@@ -1,14 +1,10 @@
-#include <iostream>
-
 #include "interpreter.h"
 #include "parser.h"
 
 using namespace std;
 
-void interpreter::interpret(char* filename, bool log)
-{
-	parser::parse(filename, this, log);
-}
+void interpreter::interpret(ifstream* inFile, bool log)
+{ parser::parse(inFile, this, log); }
 
 Token interpreter::resolveBool(Token _tokens[3])
 {
