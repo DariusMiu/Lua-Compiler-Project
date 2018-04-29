@@ -249,6 +249,7 @@ void parser::repeat_statement(std::queue<ParseNode> *parsetree, ifstream *inFile
 	while (run && interp != NULL && (*interp).ifStack.back() == true)
 	{
 		(*inFile).seekg((*interp).loopStack.back());
+		(*interp).ifStack.pop_back();
 
 		// get block
 		parser::block(parsetree, inFile, run);
@@ -261,11 +262,13 @@ void parser::repeat_statement(std::queue<ParseNode> *parsetree, ifstream *inFile
 		// find boolean expression
 		bool ifblock = true; // ifblock is backwards because repeat statement STOPS when until = true
 		if (parser::boolean_expression(parsetree, inFile, run).ID == 118)
-		{ ifblock = false; }
-		(*interp).ifStack.back() = ifblock;
+		{
+			ifblock = false;
+			(*interp).loopStack.pop_back();
+		}
+		else
+		{ (*interp).ifStack.push_back(ifblock); }
 	}
-	if (run && interp != NULL)
-	{ (*interp).ifStack.pop_back(); }
 	
 	parser::exitnode(parsetree, "repeat_statement");
 }
