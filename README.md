@@ -10,11 +10,11 @@ This project only works with an extremely simplified version of lua
 #### Progress:  
 `1.` Done  
 `2.` Done  
-`3.` Pending  
+`3.` Done  
 
 # Notes:  
 To compile, be sure to include all files in the compile line:  
-g++ Token.cpp scanner.cpp ParseNode.cpp parser.cpp main.cpp -o runme  
+g++ -std=c++11 Token.cpp Integer.cpp scanner.cpp ParseNode.cpp parser.cpp interpreter.cpp main.cpp -o runme  
 
 When run, the program will automatically run against test.lua. To run on a different file, simply call it from command line like so:  
 `./runme mylua.lua`  
