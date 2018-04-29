@@ -4,22 +4,22 @@
 #include <string>
 #include <vector>
 #include "Integer.h"
-
+#include "Token.h"
 
 class interpreter
 {
 	public:
-		void interpret(char* filename);
+		void interpret(char* filename, bool log);
+		void assignment(Token _variable, Token _value);
+		void removeInteger(std::string _name);
+		Token resolveBool(Token _tokens[3]);
+		Token arithmetic(Token _tokens[3]);
+		void print(Token TokenToPrint);
+		std::vector<bool> ifStack;
+		std::vector<int> loopStack;
+	protected:
 		std::vector<Integer> variables;
-		if_statement();
-		while_statement();
-		assignment_statement();
-		repeat_statement();
-		print_statement();
-		boolean_expression();
-		relative_op();
-		arithmetic_expression();
-		arithmetic_op();
+		Integer* findVariable(std::string VariableName);
 };
 
 #endif

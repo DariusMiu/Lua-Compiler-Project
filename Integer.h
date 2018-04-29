@@ -4,6 +4,7 @@
 class Integer
 {
 	public:
+		Integer ();
 		Integer (std::string _name, int _value);
 		std::string name;
 		int value;

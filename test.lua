@@ -1,14 +1,35 @@
 func()
-	a = 5
-	4~=5
-	if 4 < 5 then poke = 1 else poke = 0 end
+	a = +5  1
+	print (a)
+	if true then
+		poke = 1
+		if false then
+			poke = - poke 1
+		else
+			poke = + poke 1
+		end
+	else
+		poke = 0
+	end
+	print (poke)
+	mow = 1
 	mow = * mow 2
-	what ~ 14
-	while ~=4 5 do
+	print (mow)
+	what = 14
+	print (what)
 	butts = 1
+	if false then
+		while >= 100 butts do
+		butts = + butts 1
+		print (butts)
+		end
+	else n = 1 end
+	while >= 5 butts do
+	butts = + butts 1
+	print (butts)
 	end
 	repeat
-	mow = + 1 1
-	until 1 > 2
-	print (butts)
+	mow = + mow 1
+	print (mow)
+	until == mow 10
 end

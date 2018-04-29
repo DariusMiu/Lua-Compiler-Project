@@ -179,7 +179,7 @@ Token scanner::getToken(ifstream *inFile)
 
 Token scanner::peekToken(ifstream *inFile)
 {
-	int inFileLocation = (*inFile).tellg();
+	unsigned inFileLocation = (*inFile).tellg();
 	Token tempToken = scanner::getToken(inFile);
 	(*inFile).seekg(inFileLocation);
 	return tempToken;
