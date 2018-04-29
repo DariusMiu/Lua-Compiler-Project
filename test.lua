@@ -15,21 +15,15 @@ func()
 	mow = 1
 	mow = * mow 2
 	print (mow)
-	what = 14
-	print (what)
-	butts = 1
-	if false then
-		while >= 100 butts do
+	print (14)
+	butts = 0
+	while >= 5 butts do
 		butts = + butts 1
 		print (butts)
-		end
-	else n = 1 end
-	while >= 5 butts do
-	butts = + butts 1
-	print (butts)
 	end
 	repeat
 	mow = + mow 1
 	print (mow)
 	until == mow 10
+	end
 end

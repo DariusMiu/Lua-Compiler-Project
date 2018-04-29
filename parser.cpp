@@ -244,30 +244,28 @@ void parser::repeat_statement(std::queue<ParseNode> *parsetree, ifstream *inFile
 	{
 		(*interp).ifStack.push_back(ifblock);
 		(*interp).loopStack.push_back(inFileLocation);
-	}
-
-	while (run && interp != NULL && (*interp).ifStack.back() == true)
-	{
-		(*inFile).seekg((*interp).loopStack.back());
-		(*interp).ifStack.pop_back();
-
-		// get block
-		parser::block(parsetree, inFile, run);
-		// find 'until'
-		tempToken = scanner::getToken(inFile);
-		if (log) { tempToken.Print(); }
-		if (tempToken.ID != 119) // until
-		{ cout << "error: 'until' expected" << endl; }
-	
-		// find boolean expression
-		bool ifblock = true; // ifblock is backwards because repeat statement STOPS when until = true
-		if (parser::boolean_expression(parsetree, inFile, run).ID == 118)
+		while ((*interp).ifStack.back() == true)
 		{
-			ifblock = false;
-			(*interp).loopStack.pop_back();
+			(*inFile).seekg((*interp).loopStack.back());
+
+			// get block
+			parser::block(parsetree, inFile, run);
+			// find 'until'
+			tempToken = scanner::getToken(inFile);
+			if (log) { tempToken.Print(); }
+			if (tempToken.ID != 119) // until
+			{ cout << "error: 'until' expected" << endl; }
+		
+			// find boolean expression
+			bool ifblock = true; // ifblock is backwards because repeat statement STOPS when until = true
+			if (parser::boolean_expression(parsetree, inFile, run).ID == 118)
+			{
+				ifblock = false;
+				(*interp).loopStack.pop_back();
+			}
+			(*interp).ifStack.back() = ifblock;
 		}
-		else
-		{ (*interp).ifStack.push_back(ifblock); }
+		(*interp).ifStack.pop_back();
 	}
 	
 	parser::exitnode(parsetree, "repeat_statement");
