@@ -127,20 +127,23 @@ void parser::if_statement(std::queue<ParseNode> *parsetree, ifstream *inFile, bo
 	// find "else"
 	tempToken = scanner::getToken(inFile);
 	if (log) { tempToken.Print(); }
-	if (tempToken.ID != 103) // else
-	{ cout << "error: 'else' expected" << endl; }
+	if (tempToken.ID != 105) // 105 = end
+	{
+		if (tempToken.ID != 103) // else
+		{ cout << "error: 'end' or 'else' expected" << endl; }
 
-	if (run && interp != NULL && (*interp).ifStack.back() == true)
-	{ parser::block(parsetree, inFile, false); }
-	else
-	{ parser::block(parsetree, inFile, true); }
-	// find "end"
-	tempToken = scanner::getToken(inFile);
-	if (log) { tempToken.Print(); }
-	if (run && interp != NULL)
-	{ (*interp).ifStack.pop_back(); }
-	if (tempToken.ID != 105) // end
-	{ cout << "error: 'end' expected" << endl; }
+		if (run && interp != NULL && (*interp).ifStack.back() == true)
+		{ parser::block(parsetree, inFile, false); }
+		else
+		{ parser::block(parsetree, inFile, true); }
+		// find "end"
+		tempToken = scanner::getToken(inFile);
+		if (log) { tempToken.Print(); }
+		if (run && interp != NULL)
+		{ (*interp).ifStack.pop_back(); }
+		if (tempToken.ID != 105) // end
+		{ cout << "error: 'end' expected" << endl; }
+	}
 	parser::exitnode(parsetree, "if_statement");
 }
 void parser::while_statement(std::queue<ParseNode> *parsetree, ifstream *inFile, bool run)
